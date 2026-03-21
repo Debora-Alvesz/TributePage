@@ -3,6 +3,10 @@ html {
     background-color: rgb(228, 228, 197);
 }
 
+body {
+    line-height: 1.6;
+}
+
 .container {
     max-width: 1100px;
     background-color: rgb(243, 220, 175);
@@ -10,7 +14,6 @@ html {
     margin: 50px auto;
     padding: 20px 50px;
     border-radius: 25px;
-
 }
 
 .bold {
@@ -30,19 +33,24 @@ html {
     text-align: center;
 }
 
-/* Imagem */
-.featured-image {
-    display: flex;           /* Ativa o modo flex */
-    justify-content: center; /* Centraliza na horizontal */
-    align-items: center; /* Centraliza na vertical (se o container tiver altura) */
+/* Imagens */
+
+.featured-image,
+.img-bold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 
-.img-bold {
-    display: flex;           /* Ativa o modo flex */
-    justify-content: center; /* Centraliza na horizontal */
-    align-items: center; /* Centraliza na vertical (se o container tiver altura) */
-    margin-top: 20px;
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
 /* biografia */
@@ -51,7 +59,7 @@ html {
     padding: 25px 0;
     margin: 25px 0;
     border-top: 1px dashed white;
-    border-bottom: 1px solid dashed white;
+    border-bottom: 1px dashed white;
 }
 
 /* quotes */
@@ -72,13 +80,50 @@ html {
     font-style: italic;
 }
 
+/* curiosidades */
+
 .curiosities-container {
-     padding: 25px 0;
-     margin: 25px 0;
-     border-top: 1px dashed white;
-     border-bottom: 1px dashed white;
+    padding: 25px 0;
+    margin: 25px 0;
+    border-top: 1px dashed white;
+    border-bottom: 1px dashed white;
 }
 
-.curiosities-container li{
-    height: 30px;
+.curiosities-container li {
+    margin-bottom: 10px;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .main-paragraph {
+        font-size: 14px;
+    }
+
+    .quotes-container blockquote {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .quotes-container {
+        padding: 20px;
+    }
+
+    .biography-container,
+    .curiosities-container {
+        padding: 15px 0;
+    }
 }
